@@ -1,0 +1,23 @@
+{
+  "name": "foster-juice",
+  "version": "1.0.0",
+  "description": "My magnificent Nuxt.js project",
+  "author": "Andrea",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "prismic-javascript": "^2.1.1",
+    "prismic-nuxt": "git+https://github.com/gholgot/prismic-nuxt.git#nuxtjs_merge",
+    "prismic-vue": "git+https://github.com/prismicio/prismic-vue.git"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}
