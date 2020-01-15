@@ -43,8 +43,9 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  vertical-align: middle;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 5rem 0;
   width: 90%;
   min-height: 50vh;
   max-width: $screen-lg-min;
@@ -64,11 +65,12 @@ export default {
   }
 
   &__info {
-    text-align: center;
+    text-align: left;
     padding: 20px;
     @include md {
       text-align: left;
       padding-right: 20px;
+      padding-top: 30%;
     }
 
     * {
@@ -81,6 +83,7 @@ export default {
       width: 80%;
       @include md {
         margin-left: 0;
+        margin-bottom: 2rem;
       }
     }
 
@@ -90,7 +93,7 @@ export default {
     }
 
     .title {
-      font-size: 48px;
+      font-size: 25px;
       line-height: 64px;
       font-weight: bold;
     }

@@ -87,7 +87,7 @@ export default {
       font-size: 5vw;
     }
     @include lg {
-      font-size: 70px;
+      font-size: 50px;
       line-height: 84px;
     }
   }
@@ -102,11 +102,10 @@ export default {
   grid-auto-flow: row;
   grid-template-rows: 1fr 1fr 1fr;
   padding-bottom: 0;
-  margin-top: 4vw;
+  margin-top: 1vw;
   @include md {
     grid-auto-flow: column;
     grid-template-rows: 100%;
-    padding-bottom: 100px;
   }
 
   &__item {

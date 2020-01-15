@@ -30,8 +30,7 @@
   
 </template>
 <script>
-export default {
-  name: 'CallToAction',
+export default {cliname: 'CallToAction',
   props: {
     slice: {
       type: Object,
@@ -63,7 +62,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 10rem 0;
   width: 90%;
   min-height: 50vh;
   max-width: $screen-lg-min;
@@ -76,17 +75,18 @@ export default {
 .header {
   * {
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     width: 100%;
   }
 
   &__image {
-    margin: 80px 0 80px;
-    padding: 10em 0 8em;
-    background-size: cover;
-    background-position: center;
-    line-height: 1.75;
-    text-align: center;
+     line-height: 1.75;
+     background-size: cover;
+     background-position: center;
+     /* Set up proportionate scaling */
+     width: 100%;
+     height: auto;
+     text-align: center;
   }
 
   &__title {
@@ -96,13 +96,14 @@ export default {
       font-size: 5vw;
     }
     @include lg {
-      font-size: 70px;
+      font-size: 50px;
       line-height: 84px;
     }
   }
   &__subtitle {
     width: 90%;
     max-width: calc((940px / 3) * 2);
+    margin-bottom: 1rem
   }
 }
 
@@ -116,7 +117,7 @@ export default {
     background: $color-primary;
     border: 1px solid $color-primary;
     cursor: pointer;
-    padding: 12px 16px;
+    padding: 8px 14px;
     border-radius: 3px;
     font-size: $font-size-button;
     color: #fff;

@@ -31,15 +31,6 @@
         <div class="carousel-controls--nav__right" />
       </div>
     </div>
-    <slot
-      name="title"
-      :link="slice.primary.link"
-      :linkText="slice.primary.link_text"
-    >
-      <prismic-link class="call-to-action" :field="slice.primary.link">
-        {{ $prismic.asText(slice.primary.link_text) }}
-      </prismic-link>
-    </slot>
   </section>
 </template>
 
