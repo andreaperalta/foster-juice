@@ -40,14 +40,14 @@ export default {cliname: 'CallToAction',
   methods: {
     handleLink({ metaKey }, linkData) {
       /** Logic could be extracted from prismic-vue/Link instead */
-      const link = this.$prismic.asLink(linkData)
+      const linky = this.$prismic.asLink(linkData)
       if (linkData.link_type === 'Web') {
         if (metaKey) {
-          return window.open(link, '_newtab')
+          return window.open(linky, '_newtab')
         }
-        return (location.href = link)
+        return (location.href = linky)
       }
-      return this.$router.push(link)
+      return this.$router.push(linky)
     }
   }
 }
