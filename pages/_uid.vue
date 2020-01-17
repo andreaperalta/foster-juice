@@ -13,7 +13,7 @@ export default {
   async asyncData({ params, error, req }) {
     try {
       const api = await Prismic.getApi(PrismicConfig.apiEndpoint, {req})
-      const result = await api.getByUID('page', params.uid)
+      const result = await api.getByUID('page', params.uid || 'home')
       return {
         document: result.data,
         documentId: result.id

@@ -38,12 +38,12 @@ export default {
   ** Nuxt.js modules
   */
  modules: [
-  ['prismic-nuxt', {
+  ['@nuxtjs/prismic', {
     endpoint: 'https://foster-juice.cdn.prismic.io/api/v2',
     linkResolver: function(doc, ctx) {
       console.log('linkResolver trying to match doc of type', doc.type, doc.uid)
       if (doc.type === 'page') {
-        return `/pages/${doc.uid}`
+        return doc.uid === 'home' ? '/' : `/${doc.uid}`
       }
       return '/'
     }

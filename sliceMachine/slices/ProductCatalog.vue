@@ -1,0 +1,80 @@
+<template>
+  <section class="container container--full-height">
+    <div class="header">
+      <slot name="top-content" v-bind="slice" />
+      <slot name="header" v-bind="slice.primary">
+        <h1 class="header__title">
+          {{ $prismic.asText(slice.primary.title1) }}
+        </h1>
+      </slot>
+    </div> 
+    <div class="gallery image-gallery content-section">
+      <div v-for="item in slice.items" :key="item.id" class="gallery-item">
+        <img :src="item.catalog.image_url"/>
+        <h2>{{ item.catalog.title }}</h2>
+        <p>{{ item.catalog.description}}</p>
+        <p>{{ item.catalog.weight}}</p>
+        <p>{{ item.catalog.price}}</p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  props: ['slice'],
+  name: 'product_catalog'
+}
+</script>
+
+<style lang="scss" scoped>
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 90%;
+  text-align: center;
+  &--full-height {
+    min-height: 100vh;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between
+}
+
+.gallery-item{
+  flex: 0 1 48%;
+  margin: 2
+}
+
+.header {
+  * {
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+  &__title {
+    font-size: 42px;
+    line-height: 48px;
+    }
+  &__subtitle {
+    width: 90%;
+    max-width: calc((940px / 3) * 2);
+  }
+}
+
+@media (max-width: 767px){
+  .content-section{
+    margin-bottom: 2rem
+  }
+  .gallery-item{
+    flex: 100%
+  }
+}
+</style>
