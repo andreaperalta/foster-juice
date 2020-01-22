@@ -6,9 +6,9 @@
         <h1 class="header__title">
           {{ $prismic.asText(slice.primary.title) }}
         </h1>
-        <h4 class="header__subtitle">
+        <p class="header__subtitle">
           {{ $prismic.asText(slice.primary.paragraph) }}
-        </h4>
+        </p>
       </slot>
     </div>
     <div class="grid">
@@ -116,7 +116,7 @@ export default {
       border-bottom: 0;
     }
     @include lg {
-      padding: 60px;
+      padding: 30px 60px;
       border-right: 1px solid rgba(151, 151, 151, 0.2);
       border-bottom: 0;
     }

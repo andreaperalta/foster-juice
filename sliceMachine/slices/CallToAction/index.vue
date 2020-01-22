@@ -10,9 +10,9 @@
         <h1 class="header__title">
           {{ $prismic.asText(slice.primary.title) }}
         </h1>
-        <h4 class="header__subtitle">
+        <p class="header__subtitle">
           {{ $prismic.asText(slice.primary.paragraph) }}
-        </h4>
+        </p>
       </slot>
     </div>
     <div class="cta">
@@ -101,9 +101,9 @@ export default {cliname: 'CallToAction',
     }
   }
   &__subtitle {
-    width: 90%;
+    width: 100%;
     max-width: calc((940px / 3) * 2);
-    margin-bottom: 1rem
+    margin-bottom: 2rem
   }
 }
 

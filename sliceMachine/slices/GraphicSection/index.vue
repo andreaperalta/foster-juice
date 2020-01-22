@@ -70,7 +70,7 @@ export default {
     @include md {
       text-align: left;
       padding-right: 20px;
-      padding-top: 30%;
+      padding-top: 25%;
     }
 
     * {
@@ -81,6 +81,7 @@ export default {
 
     .paragraph {
       width: 80%;
+      line-height: 23px;
       @include md {
         margin-left: 0;
         margin-bottom: 2rem;
@@ -94,7 +95,7 @@ export default {
 
     .title {
       font-size: 25px;
-      line-height: 64px;
+      line-height: 35px;
       font-weight: bold;
     }
   }

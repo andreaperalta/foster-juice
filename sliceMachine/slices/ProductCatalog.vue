@@ -45,12 +45,22 @@ export default {
 .gallery {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between
+  justify-content: center
 }
 
 .gallery-item{
-  flex: 0 1 48%;
-  margin: 2
+  flex: 0 1 25%;
+  margin: 2;
+
+  h2 {
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    max-width: 220px;
+    margin: 0 auto 17px;
+  }
 }
 
 .header {
